@@ -1,0 +1,407 @@
+.flex_container {
+    display: flex;
+}
+
+.creeper {
+    position: relative;
+    top: 29px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+.nombre_JS {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    position: relative;
+    top: 0px;
+    left: 35px;
+    font-size: 25px;
+    width: 120px;
+    height: 30px;
+    user-select: none;
+}
+
+body {
+    background: #202323;
+}
+
+.Feraligatr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 85vh;
+    user-select: none;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #59b4ff;
+    border-radius: 5%;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    margin-left: calc((300px - 280px)/2);
+    width: 280px;
+    height: 380px;
+    background-image: url(image/fondo_azul.jpg);
+    background-size: cover;
+    border-radius: 5%;
+    z-index: 1;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    margin-left: calc((300px - 50px)/2);
+    width: 50px;
+    height: 550px;
+    background-image: linear-gradient(black, blue);
+    animation: rotar 2s linear infinite;
+    visibility: hidden;
+}
+
+.perspective:hover .card::after {
+    visibility: visible;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.fase_2 {
+    position: absolute;
+    margin-left: 24px;
+    bottom: 350px;
+    background: #ffffff;
+    background-image: url(image/croconaw.png);
+    border-radius: 50%;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+}
+
+.fase_2:hover {
+    background-image: url(image/croconaw.gif);
+    border: 1px solid darkblue;
+}
+
+.nombre {
+    position: absolute;
+    margin-left: 68px;
+    bottom: 336px;
+    z-index: 3;
+}
+
+.nombre h2 {
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nivel {
+    position: absolute;
+    margin-left: 173px;
+    bottom: 342px;
+    z-index: 3;
+}
+
+.nivel h6 {
+    font-size: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.power {
+    position: absolute;
+    margin-left: 197px;
+    bottom: 317px;
+    z-index: 3;
+}
+
+.power h6 {
+    font-size: 17px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.water {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url(image/water.png);
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    z-index: 3;
+    margin-left: 260px;
+    bottom: 357px;
+}
+
+.water:hover {
+    background-image: url(image/water.gif);
+}
+
+.img_feraligatr {
+    position: absolute;
+    margin-left: calc((197px - 150px)/2);
+    top: 50px;
+    width: 240px;
+    height: 180px;
+    background-image: url(https://img2.cgtrader.com/items/3829088/51f4353d25/large/feraligatr-pokemon-3d-model-51f4353d25.jpg);
+    border: 8px solid #59b4ff;
+    background-size: cover;
+    z-index: 2;
+}
+
+.img_feraligatr:hover {
+    background-image: url(image/animacion.gif);
+}
+
+.card:hover {
+    transform: rotateY(30deg);
+    transition: 0.3s;
+}
+
+.card_fondo2 {
+    position: absolute;
+    margin-left: calc((300px - 280px)/2);
+    width: 280px;
+    height: 380px;
+    background-image: url(image/water_animacion.gif);
+    background-size: cover;
+    border-radius: 5%;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.perspective:hover .card_fondo2 {
+    visibility: visible;
+}
+
+.descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 248px;
+    height: 15px;
+    margin-left: 28px;
+    bottom: 131px;
+    background-image: linear-gradient(rgb(0, 195, 255), rgb(130, 211, 243));
+    border-radius: 6px;
+    z-index: 3;
+}
+
+.descripcion h3 {
+    font-size: 9.4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.habilidad {
+    position: absolute;
+    font-size: 10px;
+    margin-left: 27px;
+    color: darkred;
+    bottom: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.habilidad_detalle {
+    width: 248px;
+    position: absolute;
+    margin-left: 27px;
+    bottom: 68px;
+    font-size: 9px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    z-index: 3;
+}
+
+.water_2 {
+    position: absolute;
+    margin-left: 27px;
+    margin-top: 265px;
+    width: 17px;
+    height: 17px;
+    background-image: url(image/water.png);
+    border-radius: 50%;
+    border: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    z-index: 3;
+}
+
+.water_3 {
+    position: absolute;
+    margin-left: 46px;
+    margin-top: 265px;
+    width: 17px;
+    height: 17px;
+    background-image: url(image/water.png);
+    border-radius: 50%;
+    border: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    z-index: 3;
+}
+
+.water_4 {
+    position: absolute;
+    margin-left: 65px;
+    margin-top: 265px;
+    width: 17px;
+    height: 17px;
+    background-image: url(image/water.png);
+    border-radius: 50%;
+    border: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    z-index: 3;
+}
+
+.water_5 {
+    position: absolute;
+    margin-left: 84px;
+    margin-top: 265px;
+    width: 17px;
+    height: 17px;
+    background-image: url(image/water.png);
+    border-radius: 50%;
+    border: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    z-index: 3;
+}
+
+.descripcion_2 {
+    position: absolute;
+    width: 40px;
+    margin-left: 115px;
+    bottom: 44px;
+    color: black;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.descripcion_3 {
+    position: absolute;
+    width: 40px;
+    margin-left: 245px;
+    bottom: 44px;
+    color: black;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.descripcion_4 {
+    position: absolute;
+    width: 180px;
+    margin-left: 27px;
+    bottom: 31px;
+    color: black;
+    font-size: 6px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.linea {
+    position: absolute;
+    margin-left: 27px;
+    margin-top: 335px;
+    width: 83px;
+    height: 2px;
+    background: grey;
+    box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.438);
+    z-index: 3;
+}
+
+.debilidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 13px;
+    margin-left: 27px;
+    bottom: 15px;
+    background: rgb(130, 211, 243);
+    border-radius: 10px;
+    font-size: 7px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.debilidad:hover {
+    background: darkblue;
+    color: white;
+}
+
+.resistencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 13px;
+    margin-left: 116px;
+    bottom: 15px;
+    background: rgb(130, 211, 243);
+    border-radius: 10px;
+    font-size: 7px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.resistencia:hover {
+    background: darkblue;
+    color: white;
+}
+
+.retirada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 13px;
+    margin-left: 205px;
+    bottom: 15px;
+    background: rgb(130, 211, 243);
+    border-radius: 10px;
+    font-size: 7px;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+}
+
+.retirada:hover {
+    background: darkblue;
+    color: white;
+}
